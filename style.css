@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+    --primary-color :#ffff;
+    --deep-orange :#E28625;
+    --light-grayish-green: #006971;
+    --very-dark-grayish-green:#004140;
+}
+
+.main{
+    width: 95%;
+    height: auto;
+    padding: 40px 0;
+    margin: auto;
+}
+
+.main .card-container{
+    width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--primary-color);
+    margin: auto;
+    padding: 30px;
+}
+
+.main .card-container .card{
+    padding: 30px;
+}
+
+.main .card-container .card .card-title{
+    color: #F2F2F2;
+    font-family: Big Shoulders Display;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+
+.main .card-container .card p{
+    color: #FFF;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5625rem;
+    margin: 30px 0;
+}
+
+.main .card-container .card button[type=button]{
+    width: 150px;
+    margin: 20px 0;
+    padding: 15px;
+    border: none;
+    border-radius: 1.5625rem;
+    background-color: var(--primary-color);
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.main .card-container .card button[type=button]:hover{
+    border: 2px solid white;
+    border-radius: 1.5625rem;
+    background-color: transparent; 
+    color: var(--primary-color);
+}
+
+.main .card-container .card:first-child{
+    background-color: var(--deep-orange);
+    border-radius: 7px 0 0 7px;
+}
+
+.main .card-container .card:first-child button{
+    color: var(--deep-orange);
+}
+
+.main .card-container .card:nth-child(2){
+    background-color: var(--light-grayish-green);
+}
+
+.main .card-container .card:nth-child(2) button{
+    color: var(--light-grayish-green);
+}
+
+.main .card-container .card:last-child{
+    background-color: var(--very-dark-grayish-green);
+    border-radius: 0 7px 7px 0;
+}
+
+.main .card-container .card:last-child button{
+    color: var(--very-dark-grayish-green);
+}
+
+/* Responviseness */
+@media screen and (max-width:950px) {
+    .main .card-container{
+        width: 95%;
+        margin: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .main .card-container .card:first-child{
+        background-color: var(--deep-orange);
+        border-radius: 7px 7px 0 0;
+    }
+
+    .main .card-container .card:nth-child(2){
+        background-color: var(--light-grayish-green);
+    }
+
+    .main .card-container .card:last-child{
+        background-color: var(--very-dark-grayish-green);
+        border-radius: 0 0 7px 7px;
+    }
+}
